@@ -1,0 +1,69 @@
+.jumbotron {
+  background-color: #185899;
+  background-image: url(./images/raketa.jpg), url(./images/mars2.jpg) ;
+  background-position:  left 220px,center 0px;
+  background-attachment: fixed , fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 220px 220px,cover;
+  color: #ffffff;
+  padding: 200px ;
+}
+
+#totop {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  padding: 0px 0 15px 7px;
+  width: 50px;
+  height: 50px;
+  background-color: #185899;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #fff;
+  z-index: 9999;
+  opacity: 0;
+}
+._anim-show{
+  transform: translate(0px,120%);
+  opacity: 0;
+  transition: all 0,8s ease 0s;
+}
+
+/* Изменение свойства opacity от 0% до 100% при прокрутке элементов по оси X */
+.slideanim {
+  visibility: hidden;
+}
+.slide {
+  animation-name: slide;
+  animation-duration: 1s;
+  visibility: visible;
+}
+
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(55%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* .test {
+  width: 100px;
+  height: 200px;
+} */
+ 
+.fixed {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 100px;
+  height: 50px;
+  
+}
+
+.fixed.hidden {
+  display: none;
+} 
